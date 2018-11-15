@@ -11,6 +11,30 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import slide, {
+  SlideMySuffixState
+} from 'app/entities/slide-my-suffix/slide-my-suffix.reducer';
+// prettier-ignore
+import mainProduct, {
+  MainProductMySuffixState
+} from 'app/entities/main-product-my-suffix/main-product-my-suffix.reducer';
+// prettier-ignore
+import product, {
+  ProductMySuffixState
+} from 'app/entities/product-my-suffix/product-my-suffix.reducer';
+// prettier-ignore
+import category, {
+  CategoryMySuffixState
+} from 'app/entities/category-my-suffix/category-my-suffix.reducer';
+// prettier-ignore
+import event, {
+  EventMySuffixState
+} from 'app/entities/event-my-suffix/event-my-suffix.reducer';
+// prettier-ignore
+import news, {
+  NewsMySuffixState
+} from 'app/entities/news-my-suffix/news-my-suffix.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -23,6 +47,12 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly slide: SlideMySuffixState;
+  readonly mainProduct: MainProductMySuffixState;
+  readonly product: ProductMySuffixState;
+  readonly category: CategoryMySuffixState;
+  readonly event: EventMySuffixState;
+  readonly news: NewsMySuffixState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -37,6 +67,12 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  slide,
+  mainProduct,
+  product,
+  category,
+  event,
+  news,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

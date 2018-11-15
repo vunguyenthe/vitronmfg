@@ -1,0 +1,56 @@
+entity Slide {
+	slideId ImageBlob
+}
+
+entity MainProduct {
+	title String required,
+	description String,
+	photo ImageBlob
+} 
+
+entity Product {
+	title String,
+	productImagePath ImageBlob,
+    detailedPdfPath AnyBlob
+}
+
+entity Category {
+    name String required,
+    description TextBlob,
+    categoryImagePath ImageBlob
+
+}
+entity Event {
+    title String required,
+    newIconPath ImageBlob,
+    content TextBlob
+}
+
+relationship OneToMany {
+    Category{product} to Product
+}
+
+relationship OneToMany {
+    Category{mainProduct} to MainProduct 
+}
+
+
+entity News {
+    title String required,
+    description String,
+    content TextBlob,
+    photo ImageBlob
+}
+
+
+// Set pagination options
+//paginate Product, Event with infinite-scroll
+paginate Product, Event, News with pagination
+
+dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Product, Job
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with mySuffix 

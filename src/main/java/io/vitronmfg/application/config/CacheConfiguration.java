@@ -38,6 +38,14 @@ public class CacheConfiguration {
             cm.createCache(io.vitronmfg.application.domain.User.class.getName(), jcacheConfiguration);
             cm.createCache(io.vitronmfg.application.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(io.vitronmfg.application.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.Slide.class.getName(), jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.MainProduct.class.getName(), jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.Product.class.getName(), jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.Category.class.getName(), jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.Category.class.getName() + ".products", jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.Category.class.getName() + ".mainProducts", jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.Event.class.getName(), jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.News.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
