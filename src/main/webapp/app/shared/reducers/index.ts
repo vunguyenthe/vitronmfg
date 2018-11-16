@@ -35,6 +35,10 @@ import event, {
 import news, {
   NewsMySuffixState
 } from 'app/entities/news-my-suffix/news-my-suffix.reducer';
+// prettier-ignore
+import logo, {
+  LogoMySuffixState
+} from 'app/entities/logo-my-suffix/logo-my-suffix.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -53,6 +57,7 @@ export interface IRootState {
   readonly category: CategoryMySuffixState;
   readonly event: EventMySuffixState;
   readonly news: NewsMySuffixState;
+  readonly logo: LogoMySuffixState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -73,6 +78,7 @@ const rootReducer = combineReducers<IRootState>({
   category,
   event,
   news,
+  logo,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });
