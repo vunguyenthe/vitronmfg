@@ -47,6 +47,7 @@ public class CacheConfiguration {
             cm.createCache(io.vitronmfg.application.domain.Event.class.getName(), jcacheConfiguration);
             cm.createCache(io.vitronmfg.application.domain.News.class.getName(), jcacheConfiguration);
             cm.createCache(io.vitronmfg.application.domain.Logo.class.getName(), jcacheConfiguration);
+            cm.createCache(io.vitronmfg.application.domain.Career.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

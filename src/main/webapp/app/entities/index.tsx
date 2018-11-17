@@ -11,6 +11,7 @@ import CategoryMySuffix from './category-my-suffix';
 import EventMySuffix from './event-my-suffix';
 import NewsMySuffix from './news-my-suffix';
 import LogoMySuffix from './logo-my-suffix';
+import CareerMySuffix from './career-my-suffix';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -24,6 +25,7 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}/event-my-suffix`} component={EventMySuffix} />
       <ErrorBoundaryRoute path={`${match.url}/news-my-suffix`} component={NewsMySuffix} />
       <ErrorBoundaryRoute path={`${match.url}/logo-my-suffix`} component={LogoMySuffix} />
+      <ErrorBoundaryRoute path={`${match.url}/career-my-suffix`} component={CareerMySuffix} />
       {/* jhipster-needle-add-route-path - JHipster will routes here */}
     </Switch>
   </div>
